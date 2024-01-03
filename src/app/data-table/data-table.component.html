@@ -1,0 +1,18 @@
+<table id="dataTable">
+  <!-- ... -->
+  <tbody id="tableBody">
+  <!-- Пример привязки данных с *ngFor для строк таблицы -->
+  <tr *ngFor="let user of users" [hidden]="!user.visible">
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.age }}</td>
+    <td>{{ user.gender }}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="button-container">
+  <!-- Обработка клика на кнопку "Получить" с помощью метода showRows() -->
+  <button (click)="showRows()">Получить</button>
+  <!-- ... -->
+</div>
